@@ -10,12 +10,10 @@ class PokemonAttributesList extends React.Component {
         const { pokemonSelectedList } = this.props;
         return (
             <div id="tableView">
-                {/* {console.log("attributes" + pokemonSelectedList)} */}
-
                 <table id="pokemons">
                     <tr>
                         <th>Attributes</th>
-                        {this.props.pokemonSelectedList.map(pokemon =>
+                        {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
                                     <th>{pokemon.name}</th>
@@ -23,7 +21,7 @@ class PokemonAttributesList extends React.Component {
                     </tr>
                     <tr>
                         <td>Abilities</td>
-                        {this.props.pokemonSelectedList.map(pokemon =>
+                        {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
 
@@ -32,7 +30,7 @@ class PokemonAttributesList extends React.Component {
                     </tr>
                     <tr>
                         <td>Weakness</td>
-                        {this.props.pokemonSelectedList.map(pokemon =>
+                        {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
 
@@ -41,7 +39,7 @@ class PokemonAttributesList extends React.Component {
                     </tr>
                     <tr>
                         <td>Type</td>
-                        {this.props.pokemonSelectedList.map(pokemon =>
+                        {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
 
@@ -50,7 +48,7 @@ class PokemonAttributesList extends React.Component {
                     </tr>
                     <tr>
                         <td>Weight</td>
-                        {this.props.pokemonSelectedList.map(pokemon =>
+                        {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
 

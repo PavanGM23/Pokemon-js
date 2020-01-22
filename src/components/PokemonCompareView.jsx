@@ -10,12 +10,7 @@ class PokemonCompareView extends React.Component {
     }
 
     handleClick(pokemon) {
-
-        // const { value } = event.currentTarget.attributes.value;
-        console.log(pokemon);
         this.selectedPokemonArray.push(pokemon);
-        // alert(pokemon);
-
         this.props.CompareClickedCallback(this.selectedPokemonArray);
     }
 
