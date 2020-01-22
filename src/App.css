@@ -39,17 +39,29 @@
 }
 
 #wrapper {
-  width:700px;
+  width:800px;
   clear:both;
   text-align: center;
+  margin-left: auto; 
+  margin-right: auto;
 }
-#first {
-  background-color:yellow;
+#pokemon1 {
+  background-color:white;
   width:200px;
   float:left;
 }
-#second {
-  background-color:yellow;
+#pokemon2 {
+  background-color:white;
+  width:200px;
+  float:left;
+}
+#pokemon3 {
+  background-color:white;
+  width:200px;
+  float:left;
+}
+#pokemon4 {
+  background-color:white;
   width:200px;
   float:left;
 }

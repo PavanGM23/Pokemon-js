@@ -8,3 +8,9 @@ export function CompareClickedAction(pokemonList) {
     },
   };
 }
+
+export function getPokemonData(){
+    return {
+        type: actionTypes.INITIAL_LOAD
+    };
+}

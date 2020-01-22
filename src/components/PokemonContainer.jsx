@@ -8,17 +8,21 @@ import pokemonReducer from '../reducers/PokemonReducer';
 
 class PokemonContainer extends React.Component {
 
-
+    constructor(props) {
+        super(props);
+        this.props.pokemonActions.getPokemonData();
+    }
 
     render() {
-        const { pokemonSelectedList, pokemonActions } = this.props;
+        const { pokemonSelectedList, pokemonActions, pokemonsData } = this.props;
         return (
             <>
-                <PokemonCompareView 
-                CompareClickedCallback={pokemonActions.CompareClickedAction}
+                <PokemonCompareView
+                    CompareClickedCallback={pokemonActions.CompareClickedAction}
+                    pokemonsData={pokemonsData}
                 />
                 <PokemonAttributesList
-                pokemonSelectedList={pokemonSelectedList}
+                    pokemonSelectedList={pokemonSelectedList}
                 />
             </>
         );
@@ -26,6 +30,7 @@ class PokemonContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({
+    pokemonsData: state.pokemonReducerState.pokemonsData,
     pokemonSelectedList: state.pokemonReducerState.pokemonSelectedList,
 });
 
