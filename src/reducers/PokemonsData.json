@@ -17,7 +17,8 @@
                 "grass",
                 "poison"
             ],
-            "weight": 15.2
+            "weight": 15.2,
+            "place": "Water"
         },
         {
             "id": "2",
@@ -36,7 +37,8 @@
                 "grass",
                 "poison"
             ],
-            "weight": 28.7
+            "weight": 28.7,
+            "place": "Water"
         },
         {
             "id": "3",
@@ -55,7 +57,8 @@
                 "bug",
                 "poison"
             ],
-            "weight": 65
+            "weight": 65,
+            "place": "Air"
         },
         {
             "id": "4",
@@ -74,7 +77,8 @@
                 "electric",
                 "psychic"
             ],
-            "weight": 46.3
+            "weight": 46.3,
+            "place": "Land"
         }
     ]
 }

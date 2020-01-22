@@ -3,6 +3,11 @@
   width: 350px;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
 .image {
   opacity: 1;
   display: block;
@@ -10,6 +15,12 @@
   height: 100%;
   transition: .5s ease;
   backface-visibility: hidden;
+  
+}
+
+.border{
+  border-top: 1px;
+  border-top-color: black
 }
 
 .middle {
@@ -45,6 +56,16 @@
   margin-left: auto; 
   margin-right: auto;
 }
+
+#tableView{
+  width:800px;
+  clear:both;
+  text-align: center;
+  margin-left: auto; 
+  margin-right: auto;
+  padding-top: 120px;
+}
+
 #pokemon1 {
   background-color:white;
   width:200px;
@@ -64,4 +85,31 @@
   background-color:white;
   width:200px;
   float:left;
+}
+
+#pokemons {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#pokemons td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#edit{
+  background-color: white;
+}
+
+#pokemons tr:nth-child(even){background-color: #f2f2f2;}
+
+#pokemons tr:hover {background-color: #ddd;}
+
+#pokemons th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: green;
+  color: black;
 }

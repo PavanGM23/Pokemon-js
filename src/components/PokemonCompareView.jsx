@@ -9,11 +9,12 @@ class PokemonCompareView extends React.Component {
         this.selectedPokemonArray = [];
     }
 
-    handleClick(event) {
+    handleClick(pokemon) {
 
-        const { value } = event.currentTarget.attributes.value;
-        this.selectedPokemonArray.push({ value });
-        alert(value);
+        // const { value } = event.currentTarget.attributes.value;
+        console.log(pokemon);
+        this.selectedPokemonArray.push(pokemon);
+        // alert(pokemon);
 
         this.props.CompareClickedCallback(this.selectedPokemonArray);
     }
@@ -24,26 +25,13 @@ class PokemonCompareView extends React.Component {
             <div id="wrapper">
 
                 {this.props.pokemonsData.map(pokemon =>
-                    (<div id={`pokemon${pokemon.id}`} className="container">
-                    <img src={pokemon.image} className="image" />
-                    <div className="middle">
-                        <div className="text" value={pokemon.name} onClick={this.handleClick}>Compare</div>
-                    </div></div>))}
-
-                    {/* <div id="first" class="container">
-                    <img src={require('./bulbasaur.png')} className="image" />
-                    <div class="middle">
-                        <div class="text" value="bulbasaur" onClick={this.handleClick}>Compare</div>
-                    </div>
-
-                </div>
-                <div id="second" class="container">
-                    <img src={require('./bulbasaur.png')} className="image" />
-                    <div class="middle">
-                        <div class="text" onClick={this.handleClick}>Compare</div>
-                    </div>
-                </div> */}
-                
+                    (<div id={`pokemon${pokemon.id}`} className="card container">
+                        <img src={pokemon.image} className="image" />
+                        <h4><b>{pokemon.name}</b></h4>
+                        <p>{pokemon.place}</p>
+                        <div className="middle">
+                            <div className="text" value={pokemon} onClick={() => this.handleClick(pokemon)}>Compare</div>
+                        </div></div>))}
             </div>
 
 
