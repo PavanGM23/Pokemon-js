@@ -1,18 +1,17 @@
 import React from 'react';
 
-
 class PokemonAttributesList extends React.Component {
+
     render() {
-        const attributes = ["abilities",
-            "weakness",
-            "type",
-            "weight"]
+
         const { pokemonSelectedList } = this.props;
+
         return (
+
             <div id="tableView">
                 <table id="pokemons">
                     <tr>
-                        <th>Attributes</th>
+                        <th id='attrId'>Attributes</th>
                         {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
@@ -24,7 +23,6 @@ class PokemonAttributesList extends React.Component {
                         {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
-
                                     <td>{pokemon.weakness}</td>
                                 </>))}
                     </tr>
@@ -33,7 +31,6 @@ class PokemonAttributesList extends React.Component {
                         {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
-
                                     <td>{pokemon.abilities}</td>
                                 </>))}
                     </tr>
@@ -42,7 +39,6 @@ class PokemonAttributesList extends React.Component {
                         {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
-
                                     <td>{pokemon.type}</td>
                                 </>))}
                     </tr>
@@ -51,13 +47,12 @@ class PokemonAttributesList extends React.Component {
                         {pokemonSelectedList.map(pokemon =>
                             (
                                 <>
-
                                     <td>{pokemon.weight}</td>
                                 </>))}
                     </tr>
 
-                </table>
-            </div>
+                </table >
+            </div >
         );
     }
 }

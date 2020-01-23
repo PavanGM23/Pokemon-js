@@ -23,6 +23,7 @@ class PokemonContainer extends React.Component {
                 />
                 <PokemonAttributesList
                     pokemonSelectedList={pokemonSelectedList}
+                    editClicked={pokemonActions.editClickedAction}
                 />
             </>
         );
@@ -32,6 +33,7 @@ class PokemonContainer extends React.Component {
 const mapStateToProps = state => ({
     pokemonsData: state.pokemonReducerState.pokemonsData,
     pokemonSelectedList: state.pokemonReducerState.pokemonSelectedList,
+    modalView: state.pokemonReducerState.modalView
 });
 
 function mapDispatchToProps(dispatch) {

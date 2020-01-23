@@ -14,3 +14,9 @@ export function getPokemonData(){
         type: actionTypes.INITIAL_LOAD
     };
 }
+
+export function editClickedAction(){
+  return {
+    type: actionTypes.EDIT_CLICKED
+  };
+}
